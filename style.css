@@ -57,6 +57,8 @@
 	border: 1px solid #0079d3;
 	font-weight: bold;
 	color: #0079d3;
+	cursor: pointer;
+	background-color: #ffffff;
 }
 
 .account-buttons .button.secondary {
@@ -65,8 +67,23 @@
 }
 .account-buttons img {
 	width: 20px;
+	cursor: pointer;
 }
 
 .main {
 	background-color: #dae0e6;
+	overflow-y: scroll;
+	width: 100%;
+	display: grid;
+	grid-template-columns: minmax(auto 1000px);
+	justify-content: center;
+}
+
+.main-column {
+	display: grid;
+	grid-template:
+		"trending trending" auto
+		"popular-posts popular-posts" auto
+		"posts sidebar" 1fr /
+		1fr 310px;
 }
