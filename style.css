@@ -122,7 +122,12 @@ h3 {
 	background-color: white;
 	padding: 10px 15px;
 	display: grid;
-	grid-template-columns: repeat(4, auto) 1fr;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+}
+.posts-categories {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
 	gap: 10px;
 }
 .popular-posts .buttons button {
@@ -138,9 +143,14 @@ h3 {
 	border-radius: 15px;
 	font-size: 16px;
 	cursor: pointer;
+	justify-content: center;
 }
-.popular-posts .buttons button img {
+.popular-posts .buttons img {
 	height: 20px;
+}
+.display-button {
+	display: grid;
+	place-items: center;
 }
 .posts {
 	grid-area: posts;
@@ -153,7 +163,12 @@ h3 {
 }
 .sidebar {
 	grid-area: sidebar;
+}
+.sidebar-widget {
 	background-color: #ffffff;
+	border-radius: 5px;
+	height: 300px;
+	margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -188,5 +203,8 @@ h3 {
 @media screen and (max-width: 600px) {
 	.logo-name {
 		display: none;
+	}
+	.posts-categories {
+		grid-template-columns: repeat(2, auto);
 	}
 }
